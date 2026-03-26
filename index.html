@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S-VYASA University – B.Tech Admissions 2026-27</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #0a2463;
+            --accent: #e84c3d;
+            --gold: #f05f32;
+            --light: #f4f7ff;
+            --dark: #070f2b;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --muted: #000000;
+            --gradient: linear-gradient(135deg, #0a2463 0%, #1a3a8f 60%, #0e4fa8 100%);
+            --white: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+
+
+        /* ===== MINIMAL REAL 3D TEXT ===== */
+        .text-3d {
+            font-weight: 800;
+            color: #0a2463;
+            display: inline-block;
+            letter-spacing: -0.5px;
+
+            /* clean depth using transform instead of heavy shadows */
+            transform: translateZ(0);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+            transition: transform 0.25s ease;
+        }
+
+        /* subtle lift */
+        .text-3d:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: var(--white);
+            backdrop-filter: blur(12px);
+            padding: 5px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(245, 166, 35, 0.25);
+            transition: all 0.3s;
+        }
+
+
+        .nav-link {
+            color: rgba(0, 0, 0, 0.85) !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 6px 14px !important;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #000000 !important;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background-color: #0D2D8F;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%230D2D8F'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%230c2982'/%3E%3Cstop offset='1' stop-color='%23190702'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%230b2575'/%3E%3Cstop offset='1' stop-color='%23310e04'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%23092168'/%3E%3Cstop offset='1' stop-color='%234a1605'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%23081d5b'/%3E%3Cstop offset='1' stop-color='%23621d07'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%2307194e'/%3E%3Cstop offset='1' stop-color='%237b2409'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%23061441'/%3E%3Cstop offset='1' stop-color='%23932b0b'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%23051034'/%3E%3Cstop offset='1' stop-color='%23ac320d'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%23040c27'/%3E%3Cstop offset='1' stop-color='%23c53a0e'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%2302081a'/%3E%3Cstop offset='1' stop-color='%23dd4110'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%2301040d'/%3E%3Cstop offset='1' stop-color='%23ee4c19'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23F05F32'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg %3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 165, 35, 0.748);
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 22px;
+            animation: fadeDown 0.7s ease both;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            animation: fadeDown 0.8s 0.1s ease both;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+            position: relative;
+        }
+
+        .hero-sub {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            max-width: 520px;
+            animation: fadeDown 0.8s 0.2s ease both;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+            animation: fadeDown 0.8s 0.3s ease both;
+        }
+
+        .hero-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: default;
+        }
+
+        .hero-tag:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-hero-primary {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-hero-primary:hover {
+            background: #c73527;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232, 76, 61, 0.4);
+            color: #fff;
+        }
+
+        .btn-hero-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 11px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-hero-outline:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .hero-actions {
+            animation: fadeDown 0.8s 0.35s ease both;
+        }
+
+        /* ===== FORM ===== */
+        .form-card {
+            background: #fff;
+            border-radius: 5px;
+            padding: 36px 32px;
+            box-shadow: 0 24px 64px rgba(10, 36, 99, 0.25);
+            animation: fadeUp 0.9s 0.2s ease both;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .form-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 22px;
+        }
+
+        .form-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.88rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--accent), #c73527);
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.25s;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232, 76, 61, 0.4);
+        }
+
+        /* ===== SECTION BASE ===== */
+        section {
+            padding: 20px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(10, 36, 99, 0.08);
+            color: var(--primary);
+            padding: 5px 16px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .section-desc {
+            color: var(--muted);
+            font-size: 0.97rem;
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-section {
+            background: var(--light);
+        }
+
+        .about-text p {
+            color: #374151;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+
+
+        /* ===== COURSES ===== */
+        .courses-section {
+            background: #fff;
+        }
+
+        .course-card {
+            background: #fff;
+            border: 2px solid #b4b9c45a;
+            border-radius: 16px;
+            padding: 28px 24px;
+            height: 100%;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            /* important */
+        }
+
+        .course-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.35s;
+        }
+
+        .course-card:hover {
+            border-color: rgba(10, 36, 99, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(10, 36, 99, 0.1);
+        }
+
+        .course-card:hover::after {
+            width: 100%;
+        }
+
+        .course-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+        }
+
+        .course-card h5 {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .course-card p {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        /* Push button to bottom */
+        .btn-apply {
+            margin-top: auto;
+            /* 🔥 key line */
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            width: 130px;
+        }
+
+        .btn-apply:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        /* ===== ADVANTAGE ===== */
+        .advantage-section {
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 80% 20%, rgba(245, 166, 35, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(232, 76, 61, 0.1) 0%, transparent 40%);
+        }
+
+        .advantage-section .section-title {
+            color: #fff;
+        }
+
+        .advantage-section .section-label {
+            background: rgba(245, 166, 35, 0.2);
+            color: var(--gold);
+        }
+
+        .advantage-section .section-desc {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 100%;
+        }
+
+        .adv-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 28px 24px;
+            height: 100%;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .adv-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            border-color: rgba(245, 166, 35, 0.4);
+        }
+
+        .adv-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: rgba(245, 166, 35, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            color: var(--gold);
+        }
+
+        .adv-card h5 {
+            font-weight: 700;
+            font-size: 0.97rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .adv-card p {
+            font-size: 0.83rem;
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== RECRUITERS ===== */
+        .recruiters-section {
+            background: var(--light);
+        }
+
+        .recruiter-logo {
+            background: #fff;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 18px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            min-height: 72px;
+            transition: all 0.25s;
+        }
+
+        .recruiter-logo:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(10, 36, 99, 0.12);
+            transform: translateY(-3px);
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: #fff;
+        }
+
+        .accordion-button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary);
+            background: #fff !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--accent);
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            filter: hue-rotate(200deg);
+        }
+
+        .accordion-body {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .accordion-item {
+            border: 1.5px solid #e5e7eb;
+            border-radius: 12px !important;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-item:first-child,
+        .accordion-item:last-child {
+            border-radius: 12px !important;
+        }
+
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--accent) 0%, #c73527 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(61, 61, 61, 0.482), rgba(0, 28, 76, 0.794)),
+                url("Media/IMG_9528.JPG.jpeg");
+            background-size: 100%;
+            background-position: center;
+            /* 👈 moves image up */
+            background-repeat: no-repeat;
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .btn-cta {
+            background: #fff;
+            color: var(--accent);
+            padding: 14px 36px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s;
+            position: relative;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+        }
+
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 22px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-num span {
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--muted);
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: #e5e7eb;
+            align-self: stretch;
+        }
+
+        /* ===== FLOATING ELEMENTS ===== */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        /* ===== PULSE BADGE ===== */
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgb(255, 255, 255);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(245, 166, 35, 0);
+            }
+        }
+
+        /* ===== FULL-WIDTH COURSE CARD ===== */
+        .course-card-full {
+            padding: 28px 32px;
+        }
+
+        .course-card-full h5 {
+            margin-bottom: 8px;
+        }
+
+        /* ===== RECRUITER CAROUSEL ===== */
+        .recruiter-carousel-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 4px;
+        }
+
+        .recruiter-carousel-viewport {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .recruiter-carousel-track {
+            display: flex;
+            gap: 16px;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .recruiter-slide {
+            flex-shrink: 0;
+        }
+
+        .recruiter-card {
+            text-align: center;
+        }
+
+        .recruiter-logo-img {
+            border-radius: 14px;
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: transform 0.25s, box-shadow 0.25s;
+            background: #fff;
+            /* clean background */
+            padding: 15px;
+        }
+
+        /* Image fit */
+        .recruiter-logo-img img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .recruiter-card p {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .recruiter-arrow {
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 2;
+        }
+
+        .recruiter-arrow:hover {
+            background: rgb(72, 91, 139);
+            border-color: white;
+            color: #ffffff;
+        }
+
+        .recruiter-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .recruiter-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(0, 37, 111, 0.545);
+            cursor: pointer;
+            transition: all 0.25s;
+            border: none;
+            padding: 0;
+        }
+
+        .recruiter-dot.active {
+            background: var(--gold);
+            width: 22px;
+            border-radius: 4px;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 60px 0 40px;
+            }
+
+            .form-card {
+                margin-top: 40px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-actions a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Media/SVYASA-Logo.png" alt=""></a>
+            <style>
+                /* Navbar Brand */
+                .navbar-brand {
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                }
+
+                /* Logo Image */
+                .navbar-brand img {
+                    height: 70px;
+                    /* adjust based on your navbar height */
+                    width: auto;
+                    object-fit: contain;
+                    transition: transform 0.3s ease;
+                }
+
+                /* Hover effect (optional premium touch) */
+                .navbar-brand img:hover {
+                    transform: scale(1.05);
+                }
+
+                /* Responsive */
+                @media (max-width: 768px) {
+                    .navbar-brand img {
+                        height: 40px;
+                    }
+                }
+            </style>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#advantage">Why S-VYASA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Admissions Open 2026–2027
+                    </div>
+                    <h1> Redefine Engineering Education with a Holistic Approach at S-VYASA, <br><span
+                            class="highlight">School of Advanced Studies</span></h1>
+                    <p class="hero-sub">Explore Cutting-Edge B.Tech Specializations Designed for Tomorrow’s Leaders</p>
+                    <div class="hero-tags">
+                        <span class="hero-tag">B.Tech CSE</span>
+                        <span class="hero-tag">B.Tech AI & ML</span>
+                        <span class="hero-tag">B.Tech AI & Data Science</span>
+                        <span class="hero-tag">B.Tech Robotics & AI</span>
+                        <span class="hero-tag">B.Tech ECE</span>
+                        <span class="hero-tag">B.Tech Robotics & Automation</span>
+                    </div>
+                    <div class="hero-actions d-flex flex-wrap gap-3">
+                        <a href="#" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Download
+                            Brochure</a>
+                        <!-- <a href="#contact" class="btn-hero-outline"><i class="fas fa-download"></i> </a> -->
+                    </div>
+                </div>
+                <div class="col-lg-5" id="contact">
+                    <div class="form-card">
+                        <h3><i class="fas fa-user-graduate me-2" style="color:var(--accent)"></i>Enter Your Details to
+                            Get Started</h3>
+                        <div class="mb-3">
+
+                            <input type="text" class="form-control" placeholder="Name: " required />
+                        </div>
+                        <div class="mb-3">
+
+                            <input type="email" class="form-control" placeholder="Email ID" required />
+                        </div>
+                        <div class="mb-3">
+
+                            <input type="tel" class="form-control" placeholder="Phone No." required />
+                        </div>
+                        <div class="row">
+                            <!-- State -->
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="">Select State</option>
+                                    <option>Karnataka</option>
+                                    <option>Tamil Nadu</option>
+                                </select>
+                            </div>
+
+                            <!-- Course -->
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="">Select Course</option>
+                                    <option>B.Tech Computer Science and Engineering (CSE)</option>
+                                    <option>B.Tech Computer Science and Engineering (Artificial Intelligence & Machine
+                                        Learning)</option>
+                                    <option>B.Tech Computer Science and Engineering (Internet of Things, Cyber Security
+                                        & Blockchain Technology)</option>
+                                    <option>B.Tech Computer Science and Engineering (Data Science)</option>
+                                    <option>B.Tech Computer Science and Engineering (Artificial intelligence)</option>
+                                    <option>B.Tech (Artificial Intelligence & Machine Learning)</option>
+                                    <option>B.Tech (Artificial Intelligence & Data Science)</option>
+                                    <option>B.Tech (Robotics & Artificial Intelligence)</option>
+                                    <option>B.Tech (Electronics & Communication Engineering)</option>
+                                    <option>B.Tech (Robotics & Automation)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <textarea class="form-control" rows="2" placeholder="Message (Optional):"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit<i class="fas fa-arrow-right ms-2"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <!-- <div class="stats-bar">
+        <div class="container">
+            <div class="row g-3 align-items-center justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal">
+                        <div class="stat-num">10<span>+</span></div>
+                        <div class="stat-label">B.Tech Specialisations</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal reveal-delay-1">
+                        <div class="stat-num">A<span>+</span></div>
+                        <div class="stat-label">NAAC Accredited</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal reveal-delay-2">
+                        <div class="stat-num">4<span>★</span></div>
+                        <div class="stat-label">KSURF Rating</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal reveal-delay-3">
+                        <div class="stat-num">2026<span>–27</span></div>
+                        <div class="stat-label">Admissions Open</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 reveal">
+                    <div class="section-label">About Us</div>
+                    <h2 class="section-title fs-2">S-VYASA University <span>(Deemed-to-be University)</span>, Sattva
+                        Global City Campus, Bangalore</h2>
+                    <p class="mb-4" style="color:#000000;line-height:1.8;font-size:0.95rem;">
+                        S-VYASA University, School of Advanced Studies, Sattva Global City, Bangalore, was established
+                        in 2024 as part of the S-VYASA Society. The university was founded by Padma Shri awardee Dr. H.
+                        R. Nagendra. It offers a range of programmes across disciplines such as Engineering, Computer
+                        Applications, Business & Management, and Allied Health, catering to students at both
+                        undergraduate and postgraduate levels.
+
+                    </p>
+                    <p style="color:#000000;line-height:1.8;font-size:0.95rem;">
+                        The core objective of S-VYASA University Sattva Global City Campus is to equip students with the
+                        knowledge and skills required to excel in their chosen fields by integrating academic learning
+                        with real-world applications. The university strives to drive positive change and shape the
+                        future of society by fostering curiosity, promoting research excellence, and encouraging
+                        innovation across diverse domains.
+
+                    </p>
+                </div>
+                <div class="col-lg-6 reveal reveal-delay-2 text-start">
+                    <div class="rank fw-bold text-center text-primary-emphasis fs-4">Rankings & Accreditations</div>
+                    <!-- <p class="section-desc mb-4">Recognised for excellence by leading bodies in higher education.</p> -->
+                    <!-- Accreditation Slider -->
+                    <div class="row g-4 mt-2">
+                        <div class="col-6 col-md-6">
+                            <div class="accred-card">
+                                <div class="accred-icon">
+                                    <img src="ranking/NAAC A+.png" alt="NAAC Logo">
+                                </div>
+                                <h6>Accredited 'A+' by NAAC</h6>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="accred-card">
+                                <div class="accred-icon">
+                                    <img src="ranking/AICTE.png" alt="AICTE Logo">
+                                </div>
+                                <h6>Approved by <br>AICTE</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="accred-card">
+                                <div class="accred-icon">
+                                    <img src="ranking/UGC.png" alt="KSURF Logo">
+                                </div>
+                                <h6>UGC Category I University</h6>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="accred-card">
+                                <div class="accred-icon">
+                                    <img src="ranking/ksurf.jpg" alt="KSURF Logo">
+                                </div>
+                                <h6>4 Star Rating by KSURF</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .accred-card {
+                            text-align: center;
+                        }
+
+                        .accred-icon {
+                            width: 150px;
+                            height: 150px;
+                            background: #f4f7ff;
+                            border: 1.5px solid #e2e8f0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 12px;
+                            margin: 0 auto 12px;
+                            padding: 10px;
+                            transition: box-shadow 0.2s, border-color 0.2s;
+                        }
+
+                        .accred-icon:hover {
+                            border-color: #0a2463;
+                            box-shadow: 0 6px 20px rgba(10, 36, 99, 0.1);
+                        }
+
+                        .accred-icon img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: contain;
+                        }
+
+                        .accred-card h6 {
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            color: #0a2463;
+                            margin: 0;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <div class="section-label">Programmes</div>
+                <h2 class="section-title">Courses <span>Offered</span></h2>
+                <p class="section-desc mx-auto">S-VYASA Deemed to be University Sattva Global City Campus offers a
+                    diverse range of B.Tech programmes across Computer Science and Engineering, Artificial Intelligence,
+                    Robotics, and Electronics. Each programme is thoughtfully designed to provide in-depth knowledge in
+                    the chosen specialisation. Moreover, these courses aim to prepare students for real-world challenges
+                    by helping them develop strong technical expertise and problem-solving skills, aligning with the
+                    evolving demands of the digital and technology-driven economy.
+                </p>
+            </div>
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#e8f0fe;color:#1a73e8;"><i
+                                class="fas fa-laptop-code"></i></div>
+                        <h5>B.Tech Computer Science and Engineering (CSE)</h5>
+                        <p>This 4-year undergraduate programme builds a strong foundation in computer science, equipping
+                            students with essential technical, analytical, and problem-solving skills required for
+                            careers in engineering and technology. The course emphasises hands-on learning, industry
+                            exposure, and practical application of core computing concepts, while also introducing
+                            students to emerging technologies shaping the digital world.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#f3e8ff;color:#7c3aed;"><i class="fas fa-brain"></i>
+                        </div>
+                        <h5>B.Tech Computer Science and Engineering (Artificial Intelligence & Machine Learning)</h5>
+                        <p>This programme focuses on developing expertise in Artificial Intelligence and Machine
+                            Learning, alongside a solid grounding in computer science fundamentals. Students learn to
+                            build intelligent systems, analyse complex data, and create predictive models, preparing
+                            them for roles in automation, analytics, and advanced computing domains.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#fce8e6;color:#d93025;"><i
+                                class="fas fa-shield-alt"></i></div>
+                        <h5>B.Tech Computer Science and Engineering (Internet of Things, Cyber Security & Blockchain
+                            Technology)</h5>
+                        <p>This programme is designed to equip students with skills in interconnected systems, secure
+                            digital infrastructure, and decentralised technologies. It covers IoT architectures, cyber
+                            security principles, and blockchain applications, enabling learners to build secure,
+                            scalable, and future-ready technology solutions.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#e6f4ea;color:#1e8e3e;"><i
+                                class="fas fa-chart-bar"></i></div>
+                        <h5>B.Tech Computer Science and Engineering (Data Science)</h5>
+                        <p>The S-VYASA deemed-to-be university B.Tech data science programme centres on extracting
+                            insights from data through statistical analysis, programming, and machine learning
+                            techniques. Students gain hands-on experience in data handling, visualisation, and
+                            predictive modelling, preparing them for data-driven roles across industries.
+
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 5 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#fff3e0;color:#f57c00;"><i
+                                class="fas fa-microchip"></i></div>
+                        <h5>B.Tech Computer Science and Engineering (Artificial Intelligence)</h5>
+                        <p>This programme offers a focused approach to Artificial Intelligence, covering areas such as
+                            intelligent systems, neural networks, and automation. Students develop the ability to design
+                            AI-driven applications and solutions that address real-world challenges across sectors.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 6 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#e8f8f5;color:#00897b;"><i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>B.Tech (Artificial Intelligence & Machine Learning)</h5>
+                        <p>This interdisciplinary programme is designed for students aiming to specialise exclusively in
+                            AI and ML. It emphasises algorithm design, deep learning, and real-world applications,
+                            preparing graduates for cutting-edge roles in intelligent automation and data-driven
+                            innovation.</p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 7 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#fef9e7;color:#d4ac0d;"><i
+                                class="fas fa-database"></i></div>
+                        <h5>B.Tech (Artificial Intelligence & Data Science)</h5>
+                        <p>This programme integrates Artificial Intelligence with Data Science to enable students to
+                            work with large datasets and intelligent systems. It focuses on data analysis, machine
+                            learning models, and decision-making frameworks used in modern business and technology
+                            environments.</p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 8 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#fdecea;color:#e53935;"><i class="fas fa-robot"></i>
+                        </div>
+                        <h5>B.Tech (Robotics & Artificial Intelligence)</h5>
+                        <p>This programme combines robotics engineering with AI technologies to develop intelligent
+                            machines and automated systems. Students learn about robotic design, control systems, and AI
+                            integration, preparing them for careers in automation, manufacturing, and advanced robotics.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 9 -->
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="course-card">
+                        <div class="course-icon" style="background:#e3f2fd;color:#1976d2;"><i
+                                class="fas fa-broadcast-tower"></i></div>
+                        <h5>B.Tech (Electronics & Communication Engineering)</h5>
+                        <p>This programme provides a strong foundation in electronics, communication systems, and signal
+                            processing. Students gain knowledge in designing and developing electronic devices and
+                            communication technologies that power modern connectivity and digital infrastructure.
+                        </p>
+                        <a href="#contact" class="btn-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 10 - full width -->
+                <div class="col-12 reveal">
+                    <div class="course-card course-card-full">
+                        <div class="d-flex align-items-start gap-4 flex-wrap">
+                            <div class="course-icon flex-shrink-0"
+                                style="background:#f3e5f5;color:#8e24aa;width:56px;height:56px;font-size:1.5rem;"><i
+                                    class="fas fa-industry"></i></div>
+                            <div class="flex-grow-1">
+                                <h5 style="font-size: 1.2rem;">B.Tech (Robotics & Automation)</h5>
+                                <p class="mb-0">This programme focuses on the design and development of automated
+                                    systems and industrial robotics. It equips students with skills in control systems,
+                                    mechanical design, and automation technologies, preparing them for roles in
+                                    manufacturing, robotics, and smart systems engineering.</p>
+                            </div>
+                            <a href="#contact" class="btn-apply flex-shrink-0 align-self-center">Apply Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGE -->
+    <section class="advantage-section" id="advantage">
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="text-center mb-5 reveal">
+                <div class="section-label">Why Us</div>
+                <h2 class="section-title" style="color:#fff;">What Sets S-VYASA <span
+                        style="color:var(--gold);">Apart</span></h2>
+                <!-- <p class="section-desc mx-auto" style="color:rgba(255,255,255,0.7);max-width:600px;">A unique blend of
+                    academic excellence, industry exposure, and holistic development that sets our students apart.</p> -->
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-flask"></i></div>
+                        <h5>Modern Laboratories to Enable Practical Learning</h5>
+                        <p>Lab sessions are integrated into the curriculum across all B.Tech programmes, allowing
+                            students to apply concepts in real time. Learners engage in hands-on training using
+                            industry-grade tools and technologies, helping them build strong analytical, technical, and
+                            problem-solving skills.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-handshake"></i></div>
+                        <h5>Academic Partnership with Industry Leaders
+                        </h5>
+                        <p>The university has active academic collaborations with leading organisations such as HP,
+                            Intel, IBM, and others. Through workshops, guest lectures, and internships, students gain
+                            valuable industry exposure while strengthening their theoretical knowledge and practical
+                            expertise.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h5>Curriculum Aligned with Industry Trends
+                        </h5>
+                        <p>S-VYASA University ensures that its B.Tech curriculum is regularly updated to reflect
+                            evolving industry demands. With inputs from academic and corporate experts, students are
+                            equipped with future-ready skills across emerging technology domains.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-spa"></i></div>
+                        <h5>Holistic Approach</h5>
+                        <p>YThe university integrates yoga, wellness, and academic excellence into its learning
+                            environment, ensuring a balanced approach to education. This enables students to enhance
+                            their focus, well-being, and overall development alongside their technical and professional
+                            growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-medal"></i></div>
+                        <h5>Scholarship & Financial Support</h5>
+                        <p>S-VYASA University offers a wide range of scholarships and financial assistance to support
+                            students across its B.Tech programmes. These are awarded based on merit, entrance exam
+                            performance, and specific categories, making quality education more<br> accessible.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                    <div class="adv-card">
+                        <div class="adv-icon"><i class="fas fa-briefcase"></i></div>
+                        <h5>Strong Placement Support</h5>
+                        <p>S-VYASA Deemed to be University, Bangalore offers structured internship opportunities in
+                            domains such as AI, Data Science, Cyber Security and Robotics, among others. The placement
+                            cell works in tandem with leading companies to assist students in building careers aligned
+                            with their chosen fields.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="placement">
+        <div class="container">
+            <!-- Top Recruiters Carousel -->
+            <div class="mt-5 reveal">
+                <h2 class="section-title text-center"> <span style="color:var(--gold);">Placement
+                    </span>Cell
+                </h2>
+                <p class="section-des text-center  mb-5">S-VYASA University’s training and placement cell
+                    works closely with
+                    leading companies across technology and engineering sectors to help students gain real-world
+                    experience, develop essential workplace skills, and build a strong professional portfolio even
+                    before graduation. These opportunities not only support academic requirements but also prepare
+                    students to become career-focused and industry-ready professionals.
+
+                    The university also offers structured internship opportunities, thereby ensuring that students
+                    fulfil their academic and industry aspirations. Offered in collaboration with reputed organisations,
+                    they enhance both theoretical understanding and practical experience, while significantly improving
+                    students’ employability.
+                </p>
+                <div class="recruiter-carousel-wrapper">
+                    <button class="recruiter-arrow recruiter-arrow-prev" onclick="moveRecruiter(-1)"
+                        aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="recruiter-carousel-viewport">
+                        <div class="recruiter-carousel-track" id="recruiterTrack">
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (1).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (2).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (3).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (4).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (5).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download (6).png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/download.png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/Intellipaat.2b32f1c5.webp" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recruiter-slide">
+                                <div class="recruiter-card">
+                                    <div class="recruiter-logo-img">
+                                        <img src="placement/Reliance.265bc950.png" alt="IBM">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="recruiter-arrow recruiter-arrow-next" onclick="moveRecruiter(1)" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <!-- Dots -->
+                <div class="recruiter-dots" id="recruiterDots"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+        .placement {
+            background-color: rgb(230, 244, 255);
+            /* border-radius: 50px;
+            margin: 20px; */
+        }
+
+        .carousel-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .carousel-inner {
+            border-radius: 12px;
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .video-wrapper {
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .video-card {
+            flex: 1;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            display: block;
+        }
+
+        /* Custom navigation buttons */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: rgba(151, 151, 151, 0.6);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+
+        .carousel-control-prev {
+            left: -60px;
+        }
+
+        .carousel-control-next {
+            right: -60px;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Custom dots */
+        .carousel-indicators {
+            position: relative;
+            margin: 30px 0 0 0;
+            bottom: auto;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d1d5db;
+            border: none;
+            opacity: 1;
+            transition: all 0.3s;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators .active {
+            background: #374151;
+            transform: scale(1.2);
+        }
+
+        /* Responsive - 2 videos on tablet */
+        @media (max-width: 991px) {
+            .video-wrapper {
+                gap: 15px;
+            }
+
+            .video-card:nth-child(3) {
+                display: none;
+            }
+
+            .carousel-control-prev {
+                left: -45px;
+            }
+
+            .carousel-control-next {
+                right: -45px;
+            }
+        }
+
+        /* Responsive - 1 video on mobile */
+        @media (max-width: 767px) {
+
+            .video-card:nth-child(2),
+            .video-card:nth-child(3) {
+                display: none;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-control-prev {
+                left: 10px;
+            }
+
+            .carousel-control-next {
+                right: 10px;
+            }
+        }
+    </style>
+
+    <div class="carousel-container my-5 py-5">
+        <h2 class="section-title text-center">Student <span style="color:var(--gold);">Testimonials
+
+            </span>
+        </h2>
+        <p class="section-des text-center  mb-5">Listen to the stories of tomorrow’s leaders currently pursuing their
+            academic journey at S-VYASA Deemed to be University, Sattva Global City Campus, Bangalore - one of the best
+            B.Tech colleges.
+
+        </p>
+        <div id="youtubeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="video-wrapper">
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/ue2wpxaUxrw?enablejsapi=1" title="YouTube video"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/BVVTyBwblnk?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/UE4S2hfrBCE?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="video-wrapper">
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/VnL23oGLhnE?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/i4vOsBkD9rM?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/m3VTGdcud8k?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="video-wrapper">
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/6OfMDbsga7Q?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/ue2wpxaUxrw?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/BVVTyBwblnk?enablejsapi=1" title="YouTube video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#youtubeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#youtubeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#youtubeCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#youtubeCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#youtubeCarousel" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Enable infinite loop with wrap
+        const carousel = new bootstrap.Carousel(document.getElementById('youtubeCarousel'), {
+            interval: 3500,
+            wrap: true,
+            ride: 'carousel'
+        });
+
+        // Pause on hover
+        const carouselElement = document.getElementById('youtubeCarousel');
+        carouselElement.addEventListener('mouseenter', () => carousel.pause());
+        carouselElement.addEventListener('mouseleave', () => carousel.cycle());
+    </script>
+
+
+
+
+    <!-- FAQ -->
+    <section class="faq-section mt-5" id="faqs">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class=" mb-5 reveal">
+                        <div class="section-label">FAQs</div>
+                        <h2 class="section-title" style="font-size: 4rem;">Frequently Asked <span>Questions</span></h2>
+                        <!-- <p class="section-desc mx-auto">Everything you need to know about S-VYASA University and its
+                            programmes.</p> -->
+                    </div>
+                </div>
+                <div class="col-lg-8">
+
+                    <div class="accordion reveal" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    What is S-VYASA Deemed to be University, Sattva Global City Campus, Bangalore?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    S-VYASA University is a UGC-recognised deemed-to-be university located in Bangalore.
+                                    The Sattva Global City Campus is known for its modern infrastructure,
+                                    industry-oriented B.Tech programmes, and a unique approach that integrates
+                                    technology education with holistic development. The university offers specialised
+                                    engineering courses designed to meet current industry demands across multiple
+                                    technology domains.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Is S-VYASA University a private or government institution?
+
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    S-VYASA Deemed to be University, Global Campus is a private deemed-to-be university
+                                    recognised by the UGC. It is considered among the reputed private institutions in
+                                    Bangalore, offering career-focused programmes with an emphasis on research,
+                                    innovation, and industry relevance.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    What B.Tech courses are offered at S-VYASA University?
+
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    S-VYASA Deemed to be University B.Tech programmes are offered across a wide spectrum
+                                    of fields like Computer Science and Engineering, Artificial Intelligence, Data
+                                    Science, Robotics, and Electronics. These include CSE with specialisations (AI & ML,
+                                    Data Science, Cyber Security & Blockchain), as well as standalone programmes such as
+                                    AI & ML, AI & Data Science, Robotics & AI, Electronics & Communication Engineering,
+                                    and Robotics & Automation.
+
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4">
+                                        Is S-VYASA University a good option for AI, Data Science, and emerging
+                                        technology programmes?
+
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        S-VYASA Deemed to be University, Bangalore is an emerging choice for students
+                                        looking to pursue careers in Artificial Intelligence, Data Science, and other
+                                        advanced technology domains. The curriculum is designed to align with industry
+                                        trends and includes hands-on learning, practical exposure, and interdisciplinary
+                                        applications, making it suitable for future-focused engineering careers.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq5">
+                                        What facilities, scholarships, and placement support are available at S-VYASA
+                                        University?
+
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        S-VYASA Deemed to be University, Sattva Global City Campus offers modern
+                                        laboratories, technology-enabled classrooms, and a supportive academic
+                                        environment. The university also provides scholarships based on merit, entrance
+                                        exam performance, and specific categories. The university also offers strong
+                                        placement support through internships, industry collaborations, and training
+                                        programmes that help students build skills and prepare for professional careers.
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+        <div class="container">
+            <h2 class="reveal">Empower Your Future with Innovation and Balance at<br> <span class="text-3d "
+                    style="font-size: 4rem !important; color: #f05f32;">S-VYASA University,</span><br> School of
+                Advanced Studies </h2>
+            <a href="#contact" class="btn-cta reveal reveal-delay-1">
+                Apply Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+
+                <!-- LEFT: LOGO -->
+                <div class="col-md-6 footer-left">
+                    <img src="Media/SVYASA-Logo.png" alt="SVYASA Logo" class="footer-logo">
+                </div>
+
+                <!-- RIGHT: CONTACT -->
+                <div class="col-md-6 footer-right">
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.google.com/?q=S-VYASA+University+Bangalore" target="_blank">
+                            Mysore Road, RV Vidyaniketan, Rajarajeshwari Nagar,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, Karnataka - 560059
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:svyasa.admissions@gmail.com">svyasa.admissions@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+919900087541">+91 9900087541</a>,
+                        <a href="tel:+919845329050">+91 9845329050</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <style>
+        /* ===== FOOTER ===== */
+        .custom-footer {
+            background: #f8f9fb;
+            padding: 20px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-logo {
+            max-height: 100px;
+            width: auto;
+        }
+
+        .footer-left {
+            display: flex;
+            justify-content: center;
+            /* pushes logo to right */
+        }
+
+        /* Right side */
+        .footer-right {
+            text-align: left;
+        }
+
+        .footer-right p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        /* Icons */
+        .footer-right i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* Links */
+        .footer-right a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-right a:hover {
+            color: #0a2463;
+            /* your primary */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-left {
+                text-align: center;
+            }
+
+            .footer-right {
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            nav.style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(10,36,99,0.2)' : 'none';
+        });
+
+        // Form submit
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            btn.innerHTML = '<i class="fas fa-check me-2"></i> Submitted! We\'ll contact you soon.';
+            btn.style.background = 'linear-gradient(135deg, #1e8e3e, #15803d)';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = 'Submit Enquiry <i class="fas fa-arrow-right ms-2"></i>';
+                btn.style.background = '';
+                btn.disabled = false;
+                e.target.reset();
+            }, 4000);
+        }
+
+        // Recruiter Carousel
+        (function () {
+            const track = document.getElementById('recruiterTrack');
+            const dotsContainer = document.getElementById('recruiterDots');
+            if (!track) return;
+
+            const slides = track.querySelectorAll('.recruiter-slide');
+            let currentIndex = 0;
+            let slidesVisible = getSlidesVisible();
+            let slideWidth = 0;
+            let totalSlides = slides.length;
+            let autoTimer;
+
+            function getSlidesVisible() {
+                const w = window.innerWidth;
+                if (w < 480) return 2;
+                if (w < 768) return 3;
+                if (w < 1024) return 4;
+                return 5;
+            }
+
+            function setSlideWidths() {
+                slidesVisible = getSlidesVisible();
+                const viewport = track.parentElement;
+                const gap = 16;
+                const availableWidth = viewport.offsetWidth;
+                slideWidth = (availableWidth - gap * (slidesVisible - 1)) / slidesVisible;
+                slides.forEach(s => {
+                    s.style.width = slideWidth + 'px';
+                });
+                track.style.gap = gap + 'px';
+            }
+
+            function maxIndex() {
+                return Math.max(0, totalSlides - slidesVisible);
+            }
+
+            function goTo(index) {
+                currentIndex = Math.max(0, Math.min(index, maxIndex()));
+                const gap = 16;
+                track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+                updateDots();
+            }
+
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                const pages = maxIndex() + 1;
+                for (let i = 0; i < pages; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'recruiter-dot' + (i === 0 ? ' active' : '');
+                    dot.addEventListener('click', () => goTo(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.recruiter-dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+
+            window.moveRecruiter = function (dir) {
+                goTo(currentIndex + dir);
+                resetAuto();
+            };
+
+            function resetAuto() {
+                clearInterval(autoTimer);
+                autoTimer = setInterval(() => {
+                    goTo(currentIndex >= maxIndex() ? 0 : currentIndex + 1);
+                }, 3200);
+            }
+
+            function init() {
+                setSlideWidths();
+                buildDots();
+                goTo(0);
+                resetAuto();
+            }
+
+            window.addEventListener('resize', () => { init(); });
+            init();
+        })();
+        const track = document.getElementById('accredTrack');
+        if (track) {
+            track.parentElement.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+            track.parentElement.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
+        }
+    </script>
+</body>
+
+</html>
