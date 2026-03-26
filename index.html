@@ -571,7 +571,7 @@
         /* ===== CTA BANNER ===== */
         .cta-banner {
             background: linear-gradient(135deg, var(--accent) 0%, #c73527 100%);
-            padding: 80px 0;
+            padding: 120px 0;
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -581,7 +581,12 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(rgba(0, 38, 90, 0.172), rgb(0, 28, 76)), url("Media/Home-Banner.jpg");
+            background: linear-gradient(rgba(61, 61, 61, 0.482), rgba(0, 28, 76, 0.794)),
+                url("Media/IMG_9528.JPG.jpeg");
+            background-size: 100%;
+            background-position: center;
+            /* 👈 moves image up */
+            background-repeat: no-repeat;
         }
 
         .cta-banner h2 {
@@ -888,7 +893,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="Media/SVYASA -Logo.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="Media/SVYASA-Logo.png" alt=""></a>
             <style>
                 /* Navbar Brand */
                 .navbar-brand {
@@ -955,7 +960,7 @@
                         <span class="hero-tag">B.Tech Robotics & Automation</span>
                     </div>
                     <div class="hero-actions d-flex flex-wrap gap-3">
-                        <a href="#courses" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Download
+                        <a href="#" class="btn-hero-primary"><i class="fas fa-graduation-cap"></i> Download
                             Brochure</a>
                         <!-- <a href="#contact" class="btn-hero-outline"><i class="fas fa-download"></i> </a> -->
                     </div>
@@ -1898,7 +1903,7 @@
 
                 <!-- LEFT: LOGO -->
                 <div class="col-md-6 footer-left">
-                    <img src="media/SVYASA -Logo.png" alt="SVYASA Logo" class="footer-logo">
+                    <img src="Media/SVYASA-Logo.png" alt="SVYASA Logo" class="footer-logo">
                 </div>
 
                 <!-- RIGHT: CONTACT -->
@@ -1941,13 +1946,19 @@
             width: auto;
         }
 
+        .footer-left {
+            display: flex;
+            justify-content: center;
+            /* pushes logo to right */
+        }
+
         /* Right side */
         .footer-right {
             text-align: left;
         }
 
         .footer-right p {
-            margin: 6px 0;
+            margin: 25px 0;
             font-size: 1.1rem;
             color: #000000;
         }
